@@ -93,8 +93,7 @@ a {
 .img4 {
   grid-area: img4;
   margin: 20px;
-  padding: 20px;
-  border: solid 2px antiquewhite; }
+  padding: 20px; }
 
 .footer {
   grid-area: footer;
@@ -114,6 +113,20 @@ a {
     .rrss nav ul li {
       padding: 20px; }
 
+@media screen and (max-width: 850px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.2fr auto auto auto auto auto 0.2fr 0.2fr;
+    grid-template-areas: "header header" "titulo titulo" "img1 img2" "img3 .." "texto texto" "texto texto" "img4 ..." "footer footer" "rrss rrss"; }
+  .header {
+    flex-direction: column;
+    justify-content: flex-start; }
+  body {
+    background-image: url(./FondoPaginaMobile.jpg);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; } }
+
 @media screen and (max-width: 400px) {
   .container {
     grid-template-columns: 1fr;
@@ -129,14 +142,14 @@ a {
     text-align: center; } }
 
 /*Fin Index*/
-/*Inicio Nosotros  */
+/*Inicio Nosotros*/
 .containerNosotros {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr 1fr 1fr 0.2fr 0.2fr;
-  grid-template-areas: "header header header" "titulo titulo titulo" "texto texto texto" "img5 img6 img7" "footer footer footer" "rrss rrss rrss"; }
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 0.2fr 0.2fr;
+  grid-template-areas: "header header" "titulo titulo" "img5 texto" "img6 texto" "img7 texto" "footer footer" "rrss rrss"; }
 
 .header {
   grid-area: header;
@@ -178,6 +191,20 @@ a {
 .rrss {
   grid-area: rrss; }
 
+@media screen and (max-width: 850px) {
+  .containerNosotros {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.2fr auto auto auto auto auto 0.2fr 0.2fr;
+    grid-template-areas: "header" "titulo" "texto" "texto" "img5" "img6" "img7" "footer" "rrss"; }
+  .header {
+    flex-direction: column;
+    justify-content: flex-start; }
+  body {
+    background-image: url(./FondoPaginaMobile.jpg);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; } }
+
 @media screen and (max-width: 400px) {
   .containerNosotros {
     grid-template-columns: 1fr;
@@ -196,9 +223,9 @@ a {
 /* Inicio Servicios */
 .containerServicios {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.2fr 0.2fr auto auto auto auto 0.2fr 0.2fr;
-  grid-template-areas: "header header header" "titulo titulo titulo" "texto texto texto" "titulo2 titulo2 titulo2" "tabla tabla tabla" "img8 img8 img8" "footer footer footer" "rrss rrss rrss"; }
+  grid-template-areas: "header header" "titulo titulo" "texto texto" "titulo2 titulo2" "tabla tabla" "img8 img8" "footer footer" "rrss rrss"; }
 
 .header {
   grid-area: header; }
@@ -216,7 +243,7 @@ a {
   margin: 20px;
   padding: 20px; }
 
-.tablaServicios table {
+.table {
   grid-area: tabla;
   margin: 20px;
   padding: 20px;
@@ -227,6 +254,7 @@ a {
 
 .img8 {
   grid-area: img8;
+  text-align: center;
   align-items: center; }
 
 .footer {
@@ -279,7 +307,7 @@ a {
 @media screen and (max-width: 400px) {
   .containerUbicacion {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.2fr auto auto 0.2fr 0.2fr;
+    grid-template-rows: 0.5fr 0.2fr 1fr 1fr 0.2fr 0.2fr;
     grid-template-areas: "header" "titulo" "mapa" "mapa" "footer" "rrss"; } }
 
 /* Fin Ubicación */
